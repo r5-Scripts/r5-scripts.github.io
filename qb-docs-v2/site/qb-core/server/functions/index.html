@@ -1,0 +1,1196 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="../../client/functions/" rel="prev"/>
+<link href="../commands/" rel="next"/>
+<link href="../../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.4.2, mkdocs-material-9.1.1" name="generator"/>
+<title>Functions - QBCore Unofficial Documentation</title>
+<link href="../../../assets/stylesheets/main.402914a4.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/palette.a0c5b2b5.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<link href="../../../stylesheets/extra.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            
+                .gscrollbar-fixer { padding-right: 15px; }
+                .gdesc-inner { font-size: 0.75rem; }
+                body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+                body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+                body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+                </style><script src="../../../assets/javascripts/glightbox.min.js"></script></head>
+<body data-md-color-accent="" data-md-color-primary="" data-md-color-scheme="default" dir="ltr">
+<script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#player">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="QBCore Unofficial Documentation" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="QBCore Unofficial Documentation">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            QBCore Unofficial Documentation
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Functions
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="" data-md-color-media="" data-md-color-primary="" data-md-color-scheme="default" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_2" hidden="" title="Switch to dark mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"></path></svg>
+</label>
+<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="" data-md-color-media="" data-md-color-primary="" data-md-color-scheme="slate" id="__palette_2" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to light mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"></path></svg>
+</label>
+</form>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
+<div class="md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../..">
+      Home
+    </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../getting-started/">
+      Getting Started
+    </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../learning/useful-links/">
+        Learning Resources
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link md-tabs__link--active" href="../../client/functions/">
+        Developer Reference
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../faq/">
+      FAQ
+    </a>
+</li>
+</ul>
+</div>
+</nav>
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="QBCore Unofficial Documentation" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="QBCore Unofficial Documentation">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
+</a>
+    QBCore Unofficial Documentation
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../..">
+        Home
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../getting-started/">
+        Getting Started
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          Learning Resources
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+          Learning Resources
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../learning/useful-links/">
+        Useful Links
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../learning/scripting/">
+        General Scripting
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../learning/nui/">
+        NUI Development
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          Developer Reference
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+          Developer Reference
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_4_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+          qb-core
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_4_1_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_4_1">
+<span class="md-nav__icon md-icon"></span>
+          qb-core
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_4_1_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_1_1" id="__nav_4_1_1_label" tabindex="0">
+          Client
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_1_1_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_4_1_1">
+<span class="md-nav__icon md-icon"></span>
+          Client
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../client/functions/">
+        Functions
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_4_1_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_1_2" id="__nav_4_1_2_label" tabindex="0">
+          Server
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_4_1_2_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_4_1_2">
+<span class="md-nav__icon md-icon"></span>
+          Server
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          Functions
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+        Functions
+      </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#player">
+    Player
+  </a>
+<nav aria-label="Player" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#getcoords">
+    GetCoords()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#getidentifier">
+    GetIdentifier()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#getsource">
+    GetSource()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#getplayer">
+    GetPlayer()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#getplayerbycitizenid">
+    GetPlayerByCitizenId()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#getofflineplayerbycitizenid">
+    GetOfflinePlayerByCitizenId()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#getplayerbyphone">
+    GetPlayerByPhone()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#getplayers">
+    GetPlayers()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#getqbplayers">
+    GetQBPlayers()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#getplayersonduty">
+    GetPlayersOnDuty()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#getdutycount">
+    GetDutyCount()
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#routing-buckets">
+    Routing Buckets
+  </a>
+<nav aria-label="Routing Buckets" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#getbucketobjects">
+    GetBucketObjects()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#setplayerbucket">
+    SetPlayerBucket()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#setentitybucket">
+    SetEntityBucket()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#getplayersinbucket">
+    GetPlayersInBucket()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#getentitiesinbucket">
+    GetEntitiesInBucket()
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#vehicles">
+    Vehicles
+  </a>
+<nav aria-label="Vehicles" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#spawnvehicle">
+    SpawnVehicle()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#createvehicle">
+    CreateVehicle()
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#callbacks">
+    Callbacks
+  </a>
+<nav aria-label="Callbacks" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#triggerclientcallback">
+    TriggerClientCallback()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#createcallback">
+    CreateCallback()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#triggercallback">
+    TriggerCallback()
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#items">
+    Items
+  </a>
+<nav aria-label="Items" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#createusableitem">
+    CreateUsableItem()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#canuseitem">
+    CanUseItem()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#useitem">
+    UseItem()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#hasitem">
+    HasItem()
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#server-administration">
+    Server Administration
+  </a>
+<nav aria-label="Server Administration" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#kick">
+    Kick()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iswhitelisted">
+    IsWhitelisted()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#addpermission">
+    AddPermission()
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../commands/">
+        Commands
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../exports/">
+        Exports
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_4_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+          qb-inventory
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_4_2">
+<span class="md-nav__icon md-icon"></span>
+          qb-inventory
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#">
+        Functions
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../faq/">
+        FAQ
+      </a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#player">
+    Player
+  </a>
+<nav aria-label="Player" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#getcoords">
+    GetCoords()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#getidentifier">
+    GetIdentifier()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#getsource">
+    GetSource()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#getplayer">
+    GetPlayer()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#getplayerbycitizenid">
+    GetPlayerByCitizenId()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#getofflineplayerbycitizenid">
+    GetOfflinePlayerByCitizenId()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#getplayerbyphone">
+    GetPlayerByPhone()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#getplayers">
+    GetPlayers()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#getqbplayers">
+    GetQBPlayers()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#getplayersonduty">
+    GetPlayersOnDuty()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#getdutycount">
+    GetDutyCount()
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#routing-buckets">
+    Routing Buckets
+  </a>
+<nav aria-label="Routing Buckets" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#getbucketobjects">
+    GetBucketObjects()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#setplayerbucket">
+    SetPlayerBucket()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#setentitybucket">
+    SetEntityBucket()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#getplayersinbucket">
+    GetPlayersInBucket()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#getentitiesinbucket">
+    GetEntitiesInBucket()
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#vehicles">
+    Vehicles
+  </a>
+<nav aria-label="Vehicles" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#spawnvehicle">
+    SpawnVehicle()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#createvehicle">
+    CreateVehicle()
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#callbacks">
+    Callbacks
+  </a>
+<nav aria-label="Callbacks" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#triggerclientcallback">
+    TriggerClientCallback()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#createcallback">
+    CreateCallback()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#triggercallback">
+    TriggerCallback()
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#items">
+    Items
+  </a>
+<nav aria-label="Items" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#createusableitem">
+    CreateUsableItem()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#canuseitem">
+    CanUseItem()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#useitem">
+    UseItem()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#hasitem">
+    HasItem()
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#server-administration">
+    Server Administration
+  </a>
+<nav aria-label="Server Administration" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#kick">
+    Kick()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iswhitelisted">
+    IsWhitelisted()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#addpermission">
+    AddPermission()
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1>Functions</h1>
+<p><a href="https://github.com/qbcore-framework/qb-core/blob/main/server/functions.lua">qb-core / server / functions.lua</a> </p>
+<h2 id="player">Player</h2>
+<h3 id="getcoords"><code>GetCoords()</code></h3>
+<dl>
+<dd>
+<p>Returns the coordinates of any entity.
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="n">QBCore</span><span class="p">.</span><span class="n">Functions</span><span class="p">.</span><span class="n">GetCoords</span><span class="p">(</span><span class="n">entity</span><span class="p">)</span>
+</code></pre></div></p>
+<ul>
+<li><code>entity</code> <code>(number)</code> - The entity you wish to get the coords of</li>
+<li>returns <code>vector4</code></li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">Usage Example</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span>
+<span class="normal"><a href="#__codelineno-1-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="kd">local</span> <span class="n">ped</span> <span class="o">=</span> <span class="n">GetPlayerPed</span><span class="p">(</span><span class="n">source</span><span class="p">)</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="kd">local</span> <span class="n">coords</span> <span class="o">=</span> <span class="n">QBCore</span><span class="p">.</span><span class="n">Functions</span><span class="p">.</span><span class="n">GetCoords</span><span class="p">(</span><span class="n">ped</span><span class="p">)</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="nb">print</span><span class="p">(</span><span class="n">coords</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</dd>
+</dl>
+<h3 id="getidentifier"><code>GetIdentifier()</code></h3>
+<dl>
+<dd>
+<p>Returns the requested <code>identifier</code> type for the requested <code>source</code>.
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="n">QBCore</span><span class="p">.</span><span class="n">Functions</span><span class="p">.</span><span class="n">GetIdentifier</span><span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="n">idtype</span><span class="p">)</span>
+</code></pre></div></p>
+<ul>
+<li><code>source</code> <code>(any)</code> - The source to get identifier of</li>
+<li><code>idtype</code> <code>(string)</code> - The identifier type</li>
+<li>returns <code>string</code> | <code>nil</code></li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">Usage Example</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<span class="normal"><a href="#__codelineno-3-2">2</a></span>
+<span class="normal"><a href="#__codelineno-3-3">3</a></span>
+<span class="normal"><a href="#__codelineno-3-4">4</a></span>
+<span class="normal"><a href="#__codelineno-3-5">5</a></span>
+<span class="normal"><a href="#__codelineno-3-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="kd">local</span> <span class="n">identifier</span> <span class="o">=</span> <span class="n">QBCore</span><span class="p">.</span><span class="n">Functions</span><span class="p">.</span><span class="n">GetIdentifier</span><span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="s1">'license'</span><span class="p">)</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="nb">print</span><span class="p">(</span><span class="n">identifier</span><span class="p">)</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a>
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="c1">-- OR: defaults to the identifier in the config of qb-core</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="kd">local</span> <span class="n">identifier</span> <span class="o">=</span> <span class="n">QBCore</span><span class="p">.</span><span class="n">Functions</span><span class="p">.</span><span class="n">GetIdentifier</span><span class="p">(</span><span class="n">source</span><span class="p">)</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="nb">print</span><span class="p">(</span><span class="n">identifier</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</dd>
+</dl>
+<h3 id="getsource"><code>GetSource()</code></h3>
+<dl>
+<dd>
+<p>Returns a players <code>source</code> by <code>identifer</code>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="n">QBCore</span><span class="p">.</span><span class="n">Functions</span><span class="p">.</span><span class="n">GetSource</span><span class="p">(</span><span class="n">identifier</span><span class="p">)</span>
+</code></pre></div></p>
+<ul>
+<li><code>identifier</code> <code>(string)</code> - The identifer of target source</li>
+<li>returns <code>number</code> | <code>0</code></li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">Usage Example</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
+<span class="normal"><a href="#__codelineno-5-2">2</a></span>
+<span class="normal"><a href="#__codelineno-5-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="kd">local</span> <span class="n">identifier</span> <span class="o">=</span> <span class="n">QBCore</span><span class="p">.</span><span class="n">Functions</span><span class="p">.</span><span class="n">GetIdentifier</span><span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="s1">'license'</span><span class="p">)</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="kd">local</span> <span class="n">playerSource</span> <span class="o">=</span> <span class="n">QBCore</span><span class="p">.</span><span class="n">Functions</span><span class="p">.</span><span class="n">GetSource</span><span class="p">(</span><span class="n">identifier</span><span class="p">)</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="nb">print</span><span class="p">(</span><span class="n">playerSource</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</dd>
+</dl>
+<h3 id="getplayer"><code>GetPlayer()</code></h3>
+<dl>
+<dd>
+<p>Returns the <code>player</code> class instance for a given <code>source</code>.
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="n">QBCore</span><span class="p">.</span><span class="n">Functions</span><span class="p">.</span><span class="n">GetPlayer</span><span class="p">(</span><span class="n">source</span><span class="p">)</span>
+</code></pre></div></p>
+<ul>
+<li><code>source</code> <code>(any)</code> - The player source</li>
+<li>returns <code>table</code> | <code>nil</code></li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">Usage Example</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
+<span class="normal"><a href="#__codelineno-7-2">2</a></span>
+<span class="normal"><a href="#__codelineno-7-3">3</a></span>
+<span class="normal"><a href="#__codelineno-7-4">4</a></span>
+<span class="normal"><a href="#__codelineno-7-5">5</a></span>
+<span class="normal"><a href="#__codelineno-7-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="kd">local</span> <span class="n">Player</span> <span class="o">=</span> <span class="n">QBCore</span><span class="p">.</span><span class="n">Functions</span><span class="p">.</span><span class="n">GetPlayer</span><span class="p">(</span><span class="n">source</span><span class="p">)</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="nb">print</span><span class="p">(</span><span class="n">QBCore</span><span class="p">.</span><span class="n">Debug</span><span class="p">(</span><span class="n">Player</span><span class="p">))</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a>
+<a id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="c1">-- OR access some player data</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="kd">local</span> <span class="n">Player</span> <span class="o">=</span> <span class="n">QBCore</span><span class="p">.</span><span class="n">Functions</span><span class="p">.</span><span class="n">GetPlayer</span><span class="p">(</span><span class="n">source</span><span class="p">)</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6"></a><span class="nb">print</span><span class="p">(</span><span class="n">Player</span><span class="p">.</span><span class="n">PlayerData</span><span class="p">.</span><span class="n">citizenid</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</dd>
+</dl>
+<h3 id="getplayerbycitizenid"><code>GetPlayerByCitizenId()</code></h3>
+<dl>
+<dd>
+<p>Returns the <code>player</code> class instance for a given <code>citizenid</code>.
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-8-1" id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="n">QBCore</span><span class="p">.</span><span class="n">Functions</span><span class="p">.</span><span class="n">GetPlayerByCitizenId</span><span class="p">(</span><span class="n">citizenid</span><span class="p">)</span>
+</code></pre></div></p>
+<ul>
+<li><code>citizenid</code> <code>(string)</code> - The citizen id</li>
+<li>returns <code>table</code> | <code>nil</code></li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">Usage Example</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span>
+<span class="normal"><a href="#__codelineno-9-2">2</a></span>
+<span class="normal"><a href="#__codelineno-9-3">3</a></span>
+<span class="normal"><a href="#__codelineno-9-4">4</a></span>
+<span class="normal"><a href="#__codelineno-9-5">5</a></span>
+<span class="normal"><a href="#__codelineno-9-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="kd">local</span> <span class="n">Player</span> <span class="o">=</span> <span class="n">QBCore</span><span class="p">.</span><span class="n">Functions</span><span class="p">.</span><span class="n">GetPlayerByCitizenId</span><span class="p">(</span><span class="s1">'ONZ55343'</span><span class="p">)</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="nb">print</span><span class="p">(</span><span class="n">QBCore</span><span class="p">.</span><span class="n">Debug</span><span class="p">(</span><span class="n">Player</span><span class="p">))</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3"></a>
+<a id="__codelineno-9-4" name="__codelineno-9-4"></a><span class="c1">-- OR access some player data</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5"></a><span class="kd">local</span> <span class="n">Player</span> <span class="o">=</span> <span class="n">QBCore</span><span class="p">.</span><span class="n">Functions</span><span class="p">.</span><span class="n">GetPlayerByCitizenId</span><span class="p">(</span><span class="s1">'ONZ55343'</span><span class="p">)</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6"></a><span class="nb">print</span><span class="p">(</span><span class="n">Player</span><span class="p">.</span><span class="n">PlayerData</span><span class="p">.</span><span class="n">license</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</dd>
+</dl>
+<h3 id="getofflineplayerbycitizenid"><code>GetOfflinePlayerByCitizenId()</code></h3>
+<dl>
+<dd>
+<p>Get an offline player object for a given citizen id.
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-10-1" id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="n">QBCore</span><span class="p">.</span><span class="n">Functions</span><span class="p">.</span><span class="n">GetOfflinePlayerByCitizenId</span><span class="p">(</span><span class="n">citizenid</span><span class="p">)</span>
+</code></pre></div></p>
+<ul>
+<li><code>citizenid</code> <code>(string)</code> - The citizen id</li>
+<li>returns <code>table</code> | <code>nil</code></li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">Usage Example</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span>
+<span class="normal"><a href="#__codelineno-11-2">2</a></span>
+<span class="normal"><a href="#__codelineno-11-3">3</a></span>
+<span class="normal"><a href="#__codelineno-11-4">4</a></span>
+<span class="normal"><a href="#__codelineno-11-5">5</a></span>
+<span class="normal"><a href="#__codelineno-11-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="kd">local</span> <span class="n">Player</span> <span class="o">=</span> <span class="n">QBCore</span><span class="p">.</span><span class="n">Functions</span><span class="p">.</span><span class="n">GetOfflinePlayerByCitizenId</span><span class="p">(</span><span class="s1">'ONZ55343'</span><span class="p">)</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2"></a><span class="nb">print</span><span class="p">(</span><span class="n">QBCore</span><span class="p">.</span><span class="n">Debug</span><span class="p">(</span><span class="n">Player</span><span class="p">))</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3"></a>
+<a id="__codelineno-11-4" name="__codelineno-11-4"></a><span class="c1">-- OR access some player data</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5"></a><span class="kd">local</span> <span class="n">Player</span> <span class="o">=</span> <span class="n">QBCore</span><span class="p">.</span><span class="n">Functions</span><span class="p">.</span><span class="n">GetOfflinePlayerByCitizenId</span><span class="p">(</span><span class="s1">'ONZ55343'</span><span class="p">)</span>
+<a id="__codelineno-11-6" name="__codelineno-11-6"></a><span class="nb">print</span><span class="p">(</span><span class="n">Player</span><span class="p">.</span><span class="n">PlayerData</span><span class="p">.</span><span class="n">license</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</dd>
+</dl>
+<h3 id="getplayerbyphone"><code>GetPlayerByPhone()</code></h3>
+<dl>
+<dd>
+<p>Get the player object from their phone number
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-12-1" id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="n">QBCore</span><span class="p">.</span><span class="n">Functions</span><span class="p">.</span><span class="n">GetPlayerByPhone</span><span class="p">(</span><span class="n">number</span><span class="p">)</span>
+</code></pre></div></p>
+<ul>
+<li><code>number</code> <code>(string)</code> - The phone number</li>
+<li>returns <code>table</code> | <code>nil</code></li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">Usage Example</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1">1</a></span>
+<span class="normal"><a href="#__codelineno-13-2">2</a></span>
+<span class="normal"><a href="#__codelineno-13-3">3</a></span>
+<span class="normal"><a href="#__codelineno-13-4">4</a></span>
+<span class="normal"><a href="#__codelineno-13-5">5</a></span>
+<span class="normal"><a href="#__codelineno-13-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="kd">local</span> <span class="n">Player</span> <span class="o">=</span> <span class="n">QBCore</span><span class="p">.</span><span class="n">Functions</span><span class="p">.</span><span class="n">GetPlayerByPhone</span><span class="p">(</span><span class="s1">'12345'</span><span class="p">)</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2"></a><span class="nb">print</span><span class="p">(</span><span class="n">QBCore</span><span class="p">.</span><span class="n">Debug</span><span class="p">(</span><span class="n">Player</span><span class="p">))</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3"></a>
+<a id="__codelineno-13-4" name="__codelineno-13-4"></a><span class="c1">-- OR access some player data</span>
+<a id="__codelineno-13-5" name="__codelineno-13-5"></a><span class="kd">local</span> <span class="n">Player</span> <span class="o">=</span> <span class="n">QBCore</span><span class="p">.</span><span class="n">Functions</span><span class="p">.</span><span class="n">GetPlayerByPhone</span><span class="p">(</span><span class="s1">'12345'</span><span class="p">)</span>
+<a id="__codelineno-13-6" name="__codelineno-13-6"></a><span class="nb">print</span><span class="p">(</span><span class="n">Player</span><span class="p">.</span><span class="n">PlayerData</span><span class="p">.</span><span class="n">license</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</dd>
+</dl>
+<h3 id="getplayers"><code>GetPlayers()</code></h3>
+<dl>
+<dd>
+<p>Get a list of player sources
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-14-1" id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="n">QBCore</span><span class="p">.</span><span class="n">Functions</span><span class="p">.</span><span class="n">GetPlayers</span><span class="p">()</span>
+</code></pre></div></p>
+<ul>
+<li>returns <code>table</code></li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">Usage Example</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1">1</a></span>
+<span class="normal"><a href="#__codelineno-15-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1"></a><span class="kd">local</span> <span class="n">Players</span> <span class="o">=</span> <span class="n">QBCore</span><span class="p">.</span><span class="n">Functions</span><span class="p">.</span><span class="n">GetPlayers</span><span class="p">()</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2"></a><span class="nb">print</span><span class="p">(</span><span class="n">QBCore</span><span class="p">.</span><span class="n">Debug</span><span class="p">(</span><span class="n">Players</span><span class="p">))</span>
+</code></pre></div></td></tr></table></div>
+</dd>
+</dl>
+<h3 id="getqbplayers"><code>GetQBPlayers()</code></h3>
+<dl>
+<dd>
+<p>Will return an array of QB Player class instances, unlike the <code>GetPlayers()</code> wrapper which only returns IDs
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-16-1" id="__codelineno-16-1" name="__codelineno-16-1"></a><span class="n">QBCore</span><span class="p">.</span><span class="n">Functions</span><span class="p">.</span><span class="n">GetQBPlayers</span><span class="p">()</span>
+</code></pre></div></p>
+<ul>
+<li>returns <code>table</code></li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">Usage Example</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-17-1">1</a></span>
+<span class="normal"><a href="#__codelineno-17-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1"></a><span class="kd">local</span> <span class="n">Players</span> <span class="o">=</span> <span class="n">QBCore</span><span class="p">.</span><span class="n">Functions</span><span class="p">.</span><span class="n">GetQBPlayers</span><span class="p">()</span>
+<a id="__codelineno-17-2" name="__codelineno-17-2"></a><span class="nb">print</span><span class="p">(</span><span class="n">QBCore</span><span class="p">.</span><span class="n">Debug</span><span class="p">(</span><span class="n">Players</span><span class="p">))</span>
+</code></pre></div></td></tr></table></div>
+</dd>
+</dl>
+<h3 id="getplayersonduty"><code>GetPlayersOnDuty()</code></h3>
+<dl>
+<dd>
+<p>Gets a list of all on duty <code>players</code> of a specified job and the <code>count</code>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-18-1" id="__codelineno-18-1" name="__codelineno-18-1"></a><span class="n">QBCore</span><span class="p">.</span><span class="n">Functions</span><span class="p">.</span><span class="n">GetPlayersOnDuty</span><span class="p">(</span><span class="n">job</span><span class="p">)</span>
+</code></pre></div></p>
+<ul>
+<li><code>job</code> <code>(string)</code> - The specified job</li>
+<li>returns <code>table</code>, <code>number</code></li>
+</ul>
+</dd>
+</dl>
+<h3 id="getdutycount"><code>GetDutyCount()</code></h3>
+<dl>
+<dd>
+<p>Returns the amount of players on duty for the specified <code>job</code>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-19-1" id="__codelineno-19-1" name="__codelineno-19-1"></a><span class="n">QBCore</span><span class="p">.</span><span class="n">Functions</span><span class="p">.</span><span class="n">GetDutyCount</span><span class="p">(</span><span class="n">job</span><span class="p">)</span>
+</code></pre></div></p>
+<ul>
+<li><code>job</code> <code>(string)</code> - The specified job</li>
+<li>returns <code>number</code></li>
+</ul>
+</dd>
+</dl>
+<h2 id="routing-buckets">Routing Buckets</h2>
+<p>Functions relating to the use of <code>routing buckets</code></p>
+<div class="admonition info">
+<p class="admonition-title">Learn more about Routing Buckets</p>
+<p>Server versions from pipeline ID 3245 and above have added a ‘routing bucket’ functionality, which is similar in concept to the ‘dimension’ or ‘virtual world’ functionality seen in prior non-Rockstar GTA network implementations.</p>
+<p><a href="https://cookbook.fivem.net/2020/11/27/routing-buckets-split-game-state/">Read more...</a></p>
+</div>
+<h3 id="getbucketobjects"><code>GetBucketObjects()</code></h3>
+<dl>
+<dd>
+<p>Get the routing bucket objects. Returns a table of <code>player_buckets</code> and <code>entity_buckets</code>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-20-1" id="__codelineno-20-1" name="__codelineno-20-1"></a><span class="n">QBCore</span><span class="p">.</span><span class="n">Functions</span><span class="p">.</span><span class="n">GetBucketObjects</span><span class="p">()</span>
+</code></pre></div></p>
+<ul>
+<li>returns <code>table</code>, <code>table</code></li>
+</ul>
+</dd>
+</dl>
+<h3 id="setplayerbucket"><code>SetPlayerBucket()</code></h3>
+<dl>
+<dd>
+<p>Will set the provided player id / source into the provided bucket id.<br/>
+Returns <code>true</code> if successful
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-21-1" id="__codelineno-21-1" name="__codelineno-21-1"></a><span class="n">QBCore</span><span class="p">.</span><span class="n">Functions</span><span class="p">.</span><span class="n">SetPlayerBucket</span><span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="n">bucket</span><span class="p">)</span>
+</code></pre></div></p>
+<ul>
+<li><code>source</code> <code>(number)</code> - The player source</li>
+<li><code>bucket</code> <code>(number)</code> - The routing bucket to set the player to</li>
+<li>returns <code>boolean</code></li>
+</ul>
+</dd>
+</dl>
+<h3 id="setentitybucket"><code>SetEntityBucket()</code></h3>
+<dl>
+<dd>
+<p>Will set any entity into the provided bucket, for example peds / vehicles / props / etc.<br/>
+Returns <code>true</code> if successful.
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-22-1" id="__codelineno-22-1" name="__codelineno-22-1"></a><span class="n">QBCore</span><span class="p">.</span><span class="n">Functions</span><span class="p">.</span><span class="n">SetEntityBucket</span><span class="p">(</span><span class="n">entity</span><span class="p">,</span> <span class="n">bucket</span><span class="p">)</span>
+</code></pre></div></p>
+<ul>
+<li><code>entity</code> <code>(number)</code> - The entity</li>
+<li><code>bucket</code> <code>(number)</code> - The routing bucket to set the entity to</li>
+<li>returns <code>boolean</code></li>
+</ul>
+</dd>
+</dl>
+<h3 id="getplayersinbucket"><code>GetPlayersInBucket()</code></h3>
+<dl>
+<dd>
+<p>Will return an array of all the player ids inside the current bucket
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-23-1" id="__codelineno-23-1" name="__codelineno-23-1"></a><span class="n">QBCore</span><span class="p">.</span><span class="n">Functions</span><span class="p">.</span><span class="n">GetPlayersInBucket</span><span class="p">(</span><span class="n">bucket</span><span class="p">)</span>
+</code></pre></div></p>
+<ul>
+<li><code>bucket</code> <code>(number)</code> - The routing bucket</li>
+<li>returns <code>table</code> | <code>false</code></li>
+</ul>
+</dd>
+</dl>
+<h3 id="getentitiesinbucket"><code>GetEntitiesInBucket()</code></h3>
+<dl>
+<dd>
+<p>Will return an array of all the entities inside the current bucket (not for player entities, use GetPlayersInBucket for that)
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-24-1" id="__codelineno-24-1" name="__codelineno-24-1"></a><span class="n">QBCore</span><span class="p">.</span><span class="n">Functions</span><span class="p">.</span><span class="n">GetEntitiesInBucket</span><span class="p">(</span><span class="n">bucket</span><span class="p">)</span>
+</code></pre></div></p>
+<ul>
+<li><code>bucket</code> <code>(number)</code> - The routing bucket</li>
+<li>returns <code>table</code> | <code>false</code></li>
+</ul>
+</dd>
+</dl>
+<h2 id="vehicles">Vehicles</h2>
+<h3 id="spawnvehicle"><code>SpawnVehicle()</code></h3>
+<dl>
+<dd>
+<p>Server side vehicle creation with optional callback.
+The <code>CreateVehicle</code> RPC still uses the client for creation so players must be near
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-25-1" id="__codelineno-25-1" name="__codelineno-25-1"></a><span class="n">QBCore</span><span class="p">.</span><span class="n">Functions</span><span class="p">.</span><span class="n">SpawnVehicle</span><span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="n">model</span><span class="p">,</span> <span class="n">coords</span><span class="p">,</span> <span class="n">warp</span><span class="p">)</span>
+</code></pre></div></p>
+<ul>
+<li><code>source</code> <code>(number)</code> - The player source. This player will be set as the entity owner.</li>
+<li><code>model</code> <code>(string | hash)</code> - The vehicle model.</li>
+<li><code>coords?</code> <code>(vector3)</code> - (optional) The spawn location. Defaults to the player position if not given.</li>
+<li><code>warp?</code> <code>boolean</code> - (optional) Will warp the player inside the vehicle if <code>true</code>.</li>
+<li>returns <code>veh</code> - A script handle (fwScriptGuid index) for the vehicle, or 0 if the vehicle failed to be created.</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">Usage Example</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-26-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-26-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-26-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-26-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-26-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-26-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-26-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-26-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-26-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-26-10">10</a></span>
+<span class="normal"><a href="#__codelineno-26-11">11</a></span>
+<span class="normal"><a href="#__codelineno-26-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1"></a><span class="n">QBCore</span><span class="p">.</span><span class="n">Functions</span><span class="p">.</span><span class="n">CreateCallback</span><span class="p">(</span><span class="s1">'qb-garage:server:spawnvehicle'</span><span class="p">,</span> <span class="kr">function</span> <span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="n">cb</span><span class="p">,</span> <span class="n">vehInfo</span><span class="p">,</span> <span class="n">coords</span><span class="p">,</span> <span class="n">warp</span><span class="p">)</span>
+<a id="__codelineno-26-2" name="__codelineno-26-2"></a>    <span class="kd">local</span> <span class="n">plate</span> <span class="o">=</span> <span class="n">vehInfo</span><span class="p">.</span><span class="n">plate</span>
+<a id="__codelineno-26-3" name="__codelineno-26-3"></a>    <span class="kd">local</span> <span class="n">veh</span> <span class="o">=</span> <span class="n">QBCore</span><span class="p">.</span><span class="n">Functions</span><span class="p">.</span><span class="n">SpawnVehicle</span><span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="n">vehInfo</span><span class="p">.</span><span class="n">vehicle</span><span class="p">,</span> <span class="n">coords</span><span class="p">,</span> <span class="n">warp</span><span class="p">)</span>
+<a id="__codelineno-26-4" name="__codelineno-26-4"></a>    <span class="n">SetEntityHeading</span><span class="p">(</span><span class="n">veh</span><span class="p">,</span> <span class="n">coords</span><span class="p">.</span><span class="n">w</span><span class="p">)</span>
+<a id="__codelineno-26-5" name="__codelineno-26-5"></a>    <span class="n">SetVehicleNumberPlateText</span><span class="p">(</span><span class="n">veh</span><span class="p">,</span> <span class="n">plate</span><span class="p">)</span>
+<a id="__codelineno-26-6" name="__codelineno-26-6"></a>    <span class="kd">local</span> <span class="n">vehProps</span> <span class="o">=</span> <span class="p">{}</span>
+<a id="__codelineno-26-7" name="__codelineno-26-7"></a>    <span class="kd">local</span> <span class="n">result</span> <span class="o">=</span> <span class="n">MySQL</span><span class="p">.</span><span class="n">query</span><span class="p">.</span><span class="n">await</span><span class="p">(</span><span class="s1">'SELECT mods FROM player_vehicles WHERE plate = ?'</span><span class="p">,</span> <span class="p">{</span><span class="n">plate</span><span class="p">})</span>
+<a id="__codelineno-26-8" name="__codelineno-26-8"></a>    <span class="kr">if</span> <span class="n">result</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="kr">then</span> <span class="n">vehProps</span> <span class="o">=</span> <span class="n">json</span><span class="p">.</span><span class="n">decode</span><span class="p">(</span><span class="n">result</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="n">mods</span><span class="p">)</span> <span class="kr">end</span>
+<a id="__codelineno-26-9" name="__codelineno-26-9"></a>    <span class="kd">local</span> <span class="n">netId</span> <span class="o">=</span> <span class="n">NetworkGetNetworkIdFromEntity</span><span class="p">(</span><span class="n">veh</span><span class="p">)</span>
+<a id="__codelineno-26-10" name="__codelineno-26-10"></a>    <span class="n">OutsideVehicles</span><span class="p">[</span><span class="n">plate</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="n">netID</span> <span class="o">=</span> <span class="n">netId</span><span class="p">,</span> <span class="n">entity</span> <span class="o">=</span> <span class="n">veh</span><span class="p">}</span>
+<a id="__codelineno-26-11" name="__codelineno-26-11"></a>    <span class="n">cb</span><span class="p">(</span><span class="n">netId</span><span class="p">,</span> <span class="n">vehProps</span><span class="p">)</span>
+<a id="__codelineno-26-12" name="__codelineno-26-12"></a><span class="kr">end</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</dd>
+</dl>
+<h3 id="createvehicle"><code>CreateVehicle()</code></h3>
+<dl>
+<dd>
+<p>Server side vehicle creation with optional callback.<br/>
+The CreateAutomobile native is still experimental but doesn't use client for creation. This doesn't work for all vehicles!
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-27-1" id="__codelineno-27-1" name="__codelineno-27-1"></a><span class="n">QBCore</span><span class="p">.</span><span class="n">Functions</span><span class="p">.</span><span class="n">CreateVehicle</span><span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="n">model</span><span class="p">,</span> <span class="n">coords</span><span class="p">,</span> <span class="n">warp</span><span class="p">)</span>
+</code></pre></div></p>
+<ul>
+<li><code>source</code> <code>(number)</code> - The player source. This player will be set as the entity owner.</li>
+<li><code>model</code> <code>(string | hash)</code> - The vehicle model.</li>
+<li><code>coords?</code> <code>(vector3)</code> - (optional) The spawn location. Defaults to the player position if not given.</li>
+<li><code>warp?</code> <code>boolean</code> - (optional) Will warp the player inside the vehicle if <code>true</code>.</li>
+<li>returns <code>veh</code> - A script handle (fwScriptGuid index) for the vehicle, or 0 if the vehicle failed to be created.</li>
+</ul>
+</dd>
+</dl>
+<h2 id="callbacks">Callbacks</h2>
+<h3 id="triggerclientcallback"><code>TriggerClientCallback()</code></h3>
+<dl>
+<dd>
+<p>Triggersa client-side callback from server-side script.
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-28-1" id="__codelineno-28-1" name="__codelineno-28-1"></a><span class="n">QBCore</span><span class="p">.</span><span class="n">Functions</span><span class="p">.</span><span class="n">TriggerClientCallback</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">source</span><span class="p">,</span> <span class="n">cb</span><span class="p">,</span> <span class="p">...)</span>
+</code></pre></div></p>
+<ul>
+<li><code>name</code> <code>(string)</code> - The callback name</li>
+<li><code>source</code> <code>(number)</code> - The source player</li>
+<li><code>cb</code> <code>(function)</code> - The callback function</li>
+<li><code>...</code> <code>(any)</code> - Additional parameters for the callback function</li>
+</ul>
+</dd>
+</dl>
+<h3 id="createcallback"><code>CreateCallback()</code></h3>
+<dl>
+<dd>
+<p>Create a server-side callback function
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-29-1" id="__codelineno-29-1" name="__codelineno-29-1"></a><span class="n">QBCore</span><span class="p">.</span><span class="n">Functions</span><span class="p">.</span><span class="n">CreateCallback</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">cb</span><span class="p">)</span>
+</code></pre></div></p>
+<ul>
+<li><code>name</code> <code>(string)</code> - The callback name</li>
+<li><code>cb</code> <code>(function)</code> - The callback function</li>
+</ul>
+</dd>
+</dl>
+<h3 id="triggercallback"><code>TriggerCallback()</code></h3>
+<dl>
+<dd>
+<p>Trigger a server-side callback from a server-side script.
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-30-1" id="__codelineno-30-1" name="__codelineno-30-1"></a><span class="n">QBCore</span><span class="p">.</span><span class="n">Functions</span><span class="p">.</span><span class="n">TriggerCallback</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">source</span><span class="p">,</span> <span class="n">cb</span><span class="p">,</span> <span class="p">...)</span>
+</code></pre></div></p>
+<ul>
+<li><code>name</code> <code>(string)</code> - The callback name</li>
+<li><code>source</code> <code>(number)</code> - The source player</li>
+<li><code>cb</code> <code>(function)</code> - The callback function</li>
+<li><code>...</code> <code>(any)</code> - Additional parameters for the callback function</li>
+</ul>
+</dd>
+</dl>
+<h2 id="items">Items</h2>
+<h3 id="createusableitem"><code>CreateUsableItem()</code></h3>
+<dl>
+<dd>
+<p>Create a usable item and define its function.
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-31-1" id="__codelineno-31-1" name="__codelineno-31-1"></a><span class="n">QBCore</span><span class="p">.</span><span class="n">Functions</span><span class="p">.</span><span class="n">CreateUseableItem</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
+</code></pre></div></p>
+<ul>
+<li><code>item</code> <code>(string)</code> - The item name</li>
+<li><code>data</code> <code>(function)</code> -  The item callback function</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">Usage Example</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-32-1">1</a></span>
+<span class="normal"><a href="#__codelineno-32-2">2</a></span>
+<span class="normal"><a href="#__codelineno-32-3">3</a></span>
+<span class="normal"><a href="#__codelineno-32-4">4</a></span>
+<span class="normal"><a href="#__codelineno-32-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1"></a><span class="n">QBCore</span><span class="p">.</span><span class="n">Functions</span><span class="p">.</span><span class="n">CreateUseableItem</span><span class="p">(</span><span class="s2">"joint"</span><span class="p">,</span> <span class="kr">function</span><span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="n">item</span><span class="p">)</span>
+<a id="__codelineno-32-2" name="__codelineno-32-2"></a>    <span class="kd">local</span> <span class="n">Player</span> <span class="o">=</span> <span class="n">QBCore</span><span class="p">.</span><span class="n">Functions</span><span class="p">.</span><span class="n">GetPlayer</span><span class="p">(</span><span class="n">source</span><span class="p">)</span>
+<a id="__codelineno-32-3" name="__codelineno-32-3"></a>    <span class="kr">if</span> <span class="ow">not</span> <span class="n">Player</span><span class="p">.</span><span class="n">Functions</span><span class="p">.</span><span class="n">RemoveItem</span><span class="p">(</span><span class="n">item</span><span class="p">.</span><span class="n">name</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">item</span><span class="p">.</span><span class="n">slot</span><span class="p">)</span> <span class="kr">then</span> <span class="kr">return</span> <span class="kr">end</span>
+<a id="__codelineno-32-4" name="__codelineno-32-4"></a>    <span class="n">TriggerClientEvent</span><span class="p">(</span><span class="s2">"consumables:client:UseJoint"</span><span class="p">,</span> <span class="n">source</span><span class="p">)</span>
+<a id="__codelineno-32-5" name="__codelineno-32-5"></a><span class="kr">end</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</dd>
+</dl>
+<h3 id="canuseitem"><code>CanUseItem()</code></h3>
+<dl>
+<dd>
+<p>Check if an item is usable.
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-33-1" id="__codelineno-33-1" name="__codelineno-33-1"></a><span class="n">QBCore</span><span class="p">.</span><span class="n">Functions</span><span class="p">.</span><span class="n">CanUseItem</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+</code></pre></div></p>
+<ul>
+<li><code>item</code> <code>(string)</code> - The item name</li>
+<li>returns <code>function</code> | <code>nil</code></li>
+</ul>
+</dd>
+</dl>
+<h3 id="useitem"><code>UseItem()</code></h3>
+<dl>
+<dd>
+<p>Use an item on the player.</p>
+<div class="admonition warning">
+<p class="admonition-title">Requires <code>qb-inventory</code></p>
+</div>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-34-1" id="__codelineno-34-1" name="__codelineno-34-1"></a><span class="n">QBCore</span><span class="p">.</span><span class="n">Functions</span><span class="p">.</span><span class="n">UseItem</span><span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="n">item</span><span class="p">)</span>
+</code></pre></div><ul>
+<li><code>source</code> <code>(number)</code> - The player source</li>
+<li><code>item</code> <code>(string)</code> - The item name</li>
+</ul>
+</dd>
+</dl>
+<h3 id="hasitem"><code>HasItem()</code></h3>
+<dl>
+<dd>
+<p>Check if the player has an item of a given amount.</p>
+<div class="admonition warning">
+<p class="admonition-title">Requires <code>qb-inventory</code></p>
+</div>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-35-1" id="__codelineno-35-1" name="__codelineno-35-1"></a><span class="n">QBCore</span><span class="p">.</span><span class="n">Functions</span><span class="p">.</span><span class="n">HasItem</span><span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="n">items</span><span class="p">,</span> <span class="n">amount</span><span class="p">)</span>
+</code></pre></div><ul>
+<li><code>source</code> <code>(number)</code> - The player source</li>
+<li><code>items</code> <code>(string | table)</code> - The item(s) required</li>
+<li><code>amount</code> <code>(number)</code> - The amount required</li>
+<li>returns <code>boolean</code></li>
+</ul>
+</dd>
+</dl>
+<h2 id="server-administration">Server Administration</h2>
+<h3 id="kick"><code>Kick()</code></h3>
+<dl>
+<dd>
+<p>Kick a player from the server
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-36-1" id="__codelineno-36-1" name="__codelineno-36-1"></a><span class="n">QBCore</span><span class="p">.</span><span class="n">Functions</span><span class="p">.</span><span class="n">Kick</span><span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="n">reason</span><span class="p">,</span> <span class="n">setKickReason</span><span class="p">,</span> <span class="n">deferrals</span><span class="p">)</span>
+</code></pre></div></p>
+<ul>
+<li><code>source</code> <code>(number)</code> - The player source</li>
+<li><code>reason</code> <code>(string)</code> - The reason for kick</li>
+<li><code>setKickReason</code> <code>(boolean)</code> - Whether to set the kick reason or not</li>
+<li><code>deferrals</code> <code>(boolean)</code> - Whether to update the deferrals messages or not</li>
+</ul>
+</dd>
+</dl>
+<h3 id="iswhitelisted"><code>IsWhitelisted()</code></h3>
+<dl>
+<dd>
+<p>Check if a player is whitelisted.
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-37-1" id="__codelineno-37-1" name="__codelineno-37-1"></a><span class="n">QBCore</span><span class="p">.</span><span class="n">Functions</span><span class="p">.</span><span class="n">IsWhitelisted</span><span class="p">(</span><span class="n">source</span><span class="p">)</span>
+</code></pre></div></p>
+<ul>
+<li><code>source</code> <code>(number)</code> - The player source</li>
+<li>returns <code>boolean</code></li>
+</ul>
+</dd>
+</dl>
+<h3 id="addpermission"><code>AddPermission()</code></h3>
+<dl>
+<dd>Add an ace permission to a player. This will only register for the current session. For persistent permissions, refer to <a href="#">Setting Permissions</a>.
+```</dd>
+</dl>
+</article>
+</div>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy", "content.code.annotate", "navigation.tabs", "navigation.sections", "navigation.path", "navigation.expand"], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+<script src="../../../assets/javascripts/bundle.b78d2936.min.js"></script>
+<script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+</html>
