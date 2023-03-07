@@ -1,0 +1,64 @@
+site_name: QBCore Unofficial Documentation
+theme:
+  name: material
+  palette:
+    # Palette toggle for light mode
+    - scheme: default
+      toggle:
+        icon: material/brightness-7 
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - content.code.copy
+    - content.code.annotate
+    - navigation.tabs
+    - navigation.sections
+    - navigation.path
+    - navigation.expand
+nav:
+  - Home: index.md
+  - Getting Started: getting-started.md
+  - Learning Resources:
+    - Useful Links: 'learning/useful-links.md'
+    - General Scripting: 'learning/scripting.md'
+    - NUI Development: 'learning/nui.md'
+  - Developer Reference:
+    - qb-core:
+      - Client:
+        - Functions: 'qb-core/client/functions.md'
+      - Server:
+        - Functions: 'qb-core/server/functions.md'
+        - Commands: 'qb-core/server/commands.md'
+        - Exports: 'qb-core/server/exports.md'
+    - qb-inventory:
+      - Functions: '#'
+  - FAQ: faq.md
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true 
+  - attr_list
+  - md_in_html
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+plugins:
+  - glightbox
+extra_css:
+  - stylesheets/extra.css
